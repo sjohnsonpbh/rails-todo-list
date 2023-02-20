@@ -1,0 +1,17 @@
+<%= turbo_frame_tag todo do %>
+  <p>
+      <strong>Task:</strong>
+      <%= todo.task %>
+    </p>
+
+    <p>
+      <strong>Done:</strong>
+      <%= todo.done %>
+  </p>
+  <div>
+    <%= link_to "edit", edit_todo_path(todo)%>
+  </div>
+  <div>
+    <%= button_to "Delete", todo_path(todo), method: :delete %>
+  </div>
+<% end %>

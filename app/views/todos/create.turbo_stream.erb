@@ -1,0 +1,9 @@
+<%
+=begin%>
+ <%=  turbo_stream.prepend "todos", "<div>This is a todo</div>"%> 
+<%
+=end%>
+
+<%= turbo_stream.prepend "todos", partial: "todos/todo", locals: {todo: @todo} %>
+
+<%= turbo_stream.update Todo.new, "" %>
